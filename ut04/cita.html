@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cita taller BiciRuta</title>
+    <link rel="stylesheet" href="css/cita.css">
+      <script src="js/cita.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="img/logo_biciruta.png" alt="Logo BiciRuta">
+        <h1>Reserva tu cita en el taller</h1>
+    </header>
+
+    <main>
+        <form action="receptor.html" method="get">
+    <label for="q">Buscar servicio</label>
+    <input type="search" id="q" name="q" required>
+    <button type="submit">Buscar</button>
+</form>
+        <form action="https://httpbin.org/post"
+      method="post"
+      enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre"
+                    required minlength="3" maxlength="80"
+                    autocomplete="name">
+
+                <label for="dni">DNI</label>
+<input type="text" id="dni" name="dni"
+    pattern="[0-9]{8}[A-Za-z]" required
+    title="Introduce 8 números y una letra"
+    aria-describedby="ayuda-dni">
+<small id="ayuda-dni">8 números y una letra.</small>
+
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="movil">Móvil</label>
+                <input type="tel" id="movil" name="movil"
+                    pattern="[67][0-9]{8}" required
+                    aria-describedby="ayuda-movil">
+                <small id="ayuda-movil">9 cifras, empezando por 6 o 7.</small>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos de la bicicleta</legend>
+
+                <label for="fecha">Fecha de la cita</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="tipo">Tipo de bicicleta</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="urbana">Urbana</option>
+                    <option value="montana">Montaña</option>
+                    <option value="electrica">Eléctrica</option>
+                    <option value="carretera">Carretera</option>
+                </select>
+
+                <label for="km">Kilómetros</label>
+                <input type="number" id="km" name="km"
+                    min="0" max="50000" step="100">
+            </fieldset>
+
+            <fieldset>
+                <legend>Servicio solicitado</legend>
+
+                <label>
+                    <input type="radio" name="servicio"
+                        value="revision" required> Revisión
+                </label>
+
+                <label>
+                    <input type="radio" name="servicio"
+                        value="reparacion"> Reparación
+                </label>
+
+                <label>
+                    <input type="radio" name="servicio"
+                        value="mantenimiento"> Mantenimiento
+                </label>
+
+                <h3>Servicios adicionales</h3>
+
+                <label>
+                    <input type="checkbox" name="extras"
+                        value="lavado"> Lavado
+                </label>
+
+                <label>
+                    <input type="checkbox" name="extras"
+                        value="recogida"> Recogida
+                </label>
+
+                <label for="averia">Descripción de la avería</label>
+                <textarea id="averia" name="averia"
+                    minlength="20" maxlength="500" required
+                    aria-describedby="ayuda-averia"></textarea>
+                <small id="ayuda-averia">Entre 20 y 500 caracteres.</small>
+
+                <label for="foto">Foto de la bicicleta</label>
+                <input type="file" id="foto" name="foto"
+                    accept="image/jpeg,image/png">
+            </fieldset>
+
+            <label>
+                <input type="checkbox" id="crear-cuenta"
+                    name="crear_cuenta" value="si"> Crear una cuenta
+            </label>
+
+            <fieldset id="cuenta" disabled>
+                <legend>Datos de la cuenta</legend>
+
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" name="clave" required>
+
+                <label for="confirmar">Repetir contraseña</label>
+                <input type="password" id="confirmar"
+                    name="confirmar" required>
+            </fieldset>
+
+            <label>
+                <input type="checkbox" name="privacidad"
+                    value="aceptada" required>
+                Acepto la política de privacidad
+            </label>
+
+            <button type="submit">Reservar cita</button>
+            <button type="reset">Limpiar formulario</button>
+
+        </form>
+    </main>
+
+
+</body>
+</html>

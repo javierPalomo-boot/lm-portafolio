@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo E-Sports</title>
+    <link rel="stylesheet" href="css/torneo.css">
+    <script src="js/torneo.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>TORNEO E-SPORTS 2026</h1>
+        <p>Inscríbete y demuestra tu nivel</p>
+    </header>
+
+    <main>
+        <form action="https://httpbin.org/post" method="post">
+
+            <fieldset>
+                <legend>Datos del jugador</legend>
+
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre"
+                    required minlength="3" maxlength="80"
+                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,80}"
+                    title="Introduce solo letras y espacios">
+
+                <label for="usuario">Nombre de usuario</label>
+                <input type="text" id="usuario" name="usuario"
+                    required pattern="[A-Za-z0-9]{4,15}"
+                    title="Entre 4 y 15 letras o números">
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento"
+                    name="nacimiento" required>
+                <small>Edad mínima: 16 años.</small>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos del torneo</legend>
+
+                <label for="nivel">Nivel del jugador</label>
+                <input type="number" id="nivel" name="nivel"
+                    min="1" max="100" required>
+
+                <label for="equipo">Equipo</label>
+                <select id="equipo" name="equipo" required>
+                    <option value="">Selecciona un equipo</option>
+                    <option value="dragones">Dragones</option>
+                    <option value="titanes">Titanes</option>
+                    <option value="lobos">Lobos</option>
+                    <option value="sin_equipo">Sin equipo</option>
+                </select>
+
+                <p>Modalidad de competición</p>
+
+                <label>
+                    <input type="radio" name="modalidad"
+                        value="individual" required>
+                    Individual
+                </label>
+
+                <label>
+                    <input type="radio" name="modalidad"
+                        value="equipos">
+                    Por equipos
+                </label>
+            </fieldset>
+
+            <label>
+                <input type="checkbox" name="normas"
+                    value="aceptadas" required>
+                Acepto las normas del torneo
+            </label>
+
+            <button type="submit">Inscribirme</button>
+            <button type="reset">Limpiar</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
