@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="inventario.xsd">
+
+    <equipo>
+        <nombre>Puerta de enlace</nombre>
+        <ip>10.0.0.1</ip>
+        <mac>18-C2-41-07-C4-E4</mac>
+        <ubicacion>Por confirmar</ubicacion>
+    </equipo>
+
+    <equipo>
+        <nombre>PC propio</nombre>
+        <ip>10.0.0.11</ip>
+        <mac>D8-43-AE-71-7C-25</mac>
+        <ubicacion>Aula ASIR</ubicacion>
+    </equipo>
+
+    <equipo>
+        <nombre>Equipo 1</nombre>
+        <ip>10.0.0.4</ip>
+        <mac>D8-43-AE-71-7B-DA</mac>
+        <ubicacion>Por confirmar</ubicacion>
+    </equipo>
+
+    <equipo>
+        <nombre>Equipo 2</nombre>
+        <ip>10.0.0.7</ip>
+        <mac>D8-43-AE-71-7C-36</mac>
+        <ubicacion>Por confirmar</ubicacion>
+    </equipo>
+
+    <equipo>
+        <nombre>Equipo 3</nombre>
+        <ip>10.0.0.8</ip>
+        <mac>D8-43-AE-71-7C-2A</mac>
+        <ubicacion>Por confirmar</ubicacion>
+    </equipo>
+
+</inventario>

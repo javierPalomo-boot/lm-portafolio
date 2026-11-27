@@ -1,0 +1,40 @@
+
+{
+    "equipos": [
+        {
+            "nombre": "Puerta de enlace",
+            "ip": "10.0.0.1",
+            "mac": "18-C2-41-07-C4-E4",
+            "ubicacion": "Por confirmar",
+            "fechaCompra": null
+        },
+        {
+            "nombre": "PC propio",
+            "ip": "10.0.0.11",
+            "mac": "D8-43-AE-71-7C-25",
+            "ubicacion": "Aula ASIR",
+            "fechaCompra": null
+        },
+        {
+            "nombre": "Equipo 1",
+            "ip": "10.0.0.4",
+            "mac": "D8-43-AE-71-7B-DA",
+            "ubicacion": "Por confirmar",
+            "fechaCompra": null
+        },
+        {
+            "nombre": "Equipo 2",
+            "ip": "10.0.0.7",
+            "mac": "D8-43-AE-71-7C-36",
+            "ubicacion": "Por confirmar",
+            "fechaCompra": null
+        },
+        {
+            "nombre": "Equipo 3",
+            "ip": "10.0.0.8",
+            "mac": "D8-43-AE-71-7C-2A",
+            "ubicacion": "Por confirmar",
+            "fechaCompra": null
+        }
+    ]
+}
